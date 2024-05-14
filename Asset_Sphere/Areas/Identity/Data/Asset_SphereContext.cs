@@ -1,4 +1,5 @@
 ﻿using Asset_Sphere.Areas.Identity.Data;
+using Asset_Sphere.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,4 +20,7 @@ public class Asset_SphereContext : IdentityDbContext<Asset_SphereUser>
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public DbSet<Asset_list> Assets { get; set; }
+
 }
